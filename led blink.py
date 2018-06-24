@@ -1,9 +1,3 @@
-
-# coding: utf-8
-
-# In[3]:
-
-
 import RPi.GPIO as g
 import time
 from time import sleep
@@ -15,7 +9,7 @@ g.setup(7,g.OUT)
 g.setup(8,g.OUT)
 
 def pattern():    
-
+#For led on one by one
     g.output(3,1)
     time.sleep(1)
     g.output(5,1)
@@ -25,8 +19,8 @@ def pattern():
     g.output(8,1)
     time.sleep(1)
 
-#print 'led on'
-
+print 'led on'
+#For led off one by one
 def pattern2():
     g.output(3,0)
     time.sleep(1)
@@ -37,7 +31,7 @@ def pattern2():
     g.output(8,0)
     time.sleep(1)
 
-#print 'led off'    
+print 'led off'    
 while True:
 
     pattern()
