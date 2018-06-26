@@ -4,8 +4,8 @@ import RPi.GPIO as IO          #calling header file which helps us use GPIO’s 
 import time                    #calling time to provide delays in program
 from time import sleep
 IO.setwarnings(False)           #do not show any warnings
-IO.setmode (IO.BOARD)         #we are programming the GPIO by BCM pin numbers. (PIN35 as ‘GPIO19’)
-IO.setup(3,IO.OUT)           # initialize GPIO19 as an output.
+IO.setmode (IO.BOARD)    
+IO.setup(3,IO.OUT)           # initialize GPIO3 as an output.
 p = IO.PWM(3,100)          #GPIO3 as PWM output, with 100Hz frequency
 p.start(0)                              #generate PWM signal with 0% duty cycle
 
